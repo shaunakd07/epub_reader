@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EPUB Reader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">EPUB Reader</div>
+      <label class="file">
+        <input id="fileInput" type="file" accept=".epub" />
+        <span>Open EPUB</span>
+      </label>
+      <div class="controls">
+        <button id="prevBtn" type="button">Prev</button>
+        <button id="nextBtn" type="button">Next</button>
+        <button id="fontDec" type="button">A-</button>
+        <button id="fontInc" type="button">A+</button>
+        <button id="singleBtn" type="button">Single</button>
+        <button id="spreadBtn" type="button">Two</button>
+        <button id="darkToggle" type="button">Dark</button>
+        <button id="lineToggle" type="button">Line</button>
+        <label class="margin-control">
+          <span>Margin</span>
+          <input id="marginRange" type="range" min="0" max="80" value="24" />
+          <input id="marginValue" type="number" min="0" max="120" value="24" />
+        </label>
+      </div>
+      <div id="status" class="status">No book loaded</div>
+    </header>
+
+    <div class="layout">
+      <aside class="toc">
+        <div class="toc-title">Contents</div>
+        <div id="tocList" class="toc-list">Open a book to load the table of contents.</div>
+      </aside>
+      <main id="viewer" class="viewer" aria-live="polite"></main>
+    </div>
+
+    <script src="vendor/jszip.min.js"></script>
+    <script src="vendor/epub.min.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
