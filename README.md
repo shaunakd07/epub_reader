@@ -1,6 +1,6 @@
 ﻿# EPUB Reader (Core)
 
-Minimal EPUB reader core built with a TypeScript-first layout and a lightweight HTML UI.
+Minimal EPUB reader core built with a TypeScript-first layout and a lightweight HTML UI. Load any EPUB file to read it easily.
 
 ## Run locally
 Serve the folder with a local server (recommended for file access):
